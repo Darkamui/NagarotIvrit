@@ -1,0 +1,59 @@
+.services__section {
+	padding: 4rem 0 0 0;
+	h2 {
+		font-size: 4rem;
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+	.services__container {
+		max-width: 100rem;
+		direction: rtl;
+		margin: auto;
+		display: flex;
+		gap: 5rem;
+		text-align: center;
+
+		.card {
+			background: #f4f5f6;
+			.services__content-container {
+				padding: 2rem 0;
+			}
+			img {
+				width: 100%;
+				max-width: 35rem;
+			}
+			h3 {
+				font-size: 2.5rem;
+			}
+			p {
+				font-size: 1.5rem;
+				padding: 0.5rem 1rem;
+			}
+			a {
+				color: $color-primary;
+				font-size: 1.75rem;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 900px) {
+	.services__container {
+		flex-direction: column;
+		padding: 0 2rem;
+		.card {
+			width: 70%;
+			margin: auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.services__container {
+		flex-direction: column;
+		padding: 2rem;
+		.card {
+			width: 100%;
+			margin: auto;
+		}
+	}
+}

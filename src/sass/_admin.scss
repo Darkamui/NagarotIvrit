@@ -1,0 +1,77 @@
+.adminContainer {
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 5rem;
+	.removeIcon {
+		cursor: pointer;
+		width: 7rem;
+		height: 100%;
+		margin: 1rem 0 0 1rem;
+		&:hover {
+			fill: "rgb(160, 19, 4)";
+		}
+	}
+	.adminHeaderContainer {
+		max-width: 120rem;
+		background: linear-gradient(
+			180deg,
+			rgba(47, 37, 25, 1) 0%,
+			rgba(78, 64, 47, 1) 69%,
+			rgba(255, 255, 255, 1) 100%
+		);
+		border-radius: 20px;
+		margin: 5rem auto 0 auto;
+		padding: 5rem 3rem;
+		display: flex;
+		gap: 2rem;
+		.profileHeader {
+			padding: 2rem 2rem;
+			p {
+				font-size: 2rem;
+				text-align: center;
+				color: #fff;
+			}
+		}
+		.profileMain {
+			padding: 0rem 2rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+		button {
+			text-transform: uppercase;
+		}
+		.projectList {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			background-color: antiquewhite;
+			border-radius: 10px;
+			padding: 0 1rem;
+			img {
+				max-width: 50rem;
+				max-height: 25rem;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 15px;
+			}
+			.leftList {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				p {
+					font-size: 2rem;
+					font-weight: 600;
+					padding: 1rem;
+				}
+			}
+		}
+	}
+}
+.rightHeader {
+	display: flex;
+	gap: 3rem;
+	flex-wrap: wrap;
+}

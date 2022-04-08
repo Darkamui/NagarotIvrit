@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #f9fafa;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.primary-button {
+  background-color: #fa7d09;
+  padding: 1rem 5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.primary-button:hover {
+  background-color: transparent;
+  border: 1px solid #fa7d09;
+  color: #fa7d09;
+}
+
+.secondary-button {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem 5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.secondary-button:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+nav {
+  max-height: 10vh;
+  padding: 2rem 4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.navLogoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navLogoContainer img {
+  max-height: 6rem;
+  height: 100%;
+}
+
+.navLinksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  direction: rtl;
+  gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navLinksContainer .navLink {
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.navSocialContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-twitter,
+.fa-youtube {
+  font-size: 3.5rem;
+  width: 100%;
+  color: #3b2a30;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-youtube:hover {
+  color: #fa7d09;
+}
+/*# sourceMappingURL=index.css.map */

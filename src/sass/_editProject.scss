@@ -1,0 +1,13 @@
+.editProjectForm {
+	img {
+		max-width: 25rem;
+		width: 100%;
+	}
+
+	display: flex;
+	flex-wrap: wrap;
+	.editProjectItem {
+		max-width: 30rem;
+		margin-bottom: 1rem;
+	}
+}
