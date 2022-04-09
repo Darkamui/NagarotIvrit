@@ -1,7 +1,8 @@
 nav {
 	min-height: 10vh;
-	padding: 2rem 4rem;
+	padding: 2rem 4rem 2rem 4rem;
 	justify-content: space-between;
+
 	display: flex;
 	background-color: #fff;
 	box-shadow: 0px 15px 20px -10px #99533f;
@@ -10,7 +11,6 @@ nav {
 	@media (max-width: 1024px) {
 		justify-content: space-between;
 		align-items: center;
-		gap: 3rem;
 	}
 }
 
@@ -71,8 +71,8 @@ nav {
 }
 
 .app__navbar-menu {
-	width: 40px;
-	height: 40px;
+	width: 45px;
+	height: 45px;
 	border-radius: 50%;
 	position: relative;
 	display: flex;
@@ -81,8 +81,8 @@ nav {
 	background-color: $color-grey-dark-1;
 
 	svg {
-		width: 70%;
-		height: 70%;
+		width: 80%;
+		height: 80%;
 		color: #000;
 	}
 
