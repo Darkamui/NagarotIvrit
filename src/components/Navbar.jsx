@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
+import { AiFillCaretDown } from "react-icons/ai";
 import mini from "../img/mini-carp.jpg";
 import logo from "../img/logo.png";
 function Navbar() {
 	const [toggle, setToggle] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 	useEffect(() => {}, [toggle]);
 
 	return (
@@ -61,14 +63,63 @@ function Navbar() {
 						בית
 					</Link>
 				</li>
-				<li>
-					<Link to="/about" className="navLink">
-						אודות
-					</Link>
-				</li>
+
 				<li>
 					<Link to="/projects" className="navLink">
 						פרוייקטים
+					</Link>
+				</li>
+				<li>
+					<div className="catLink">
+						<div
+							className="navLink catContainer"
+							onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
+						>
+							קטגריות
+							<AiFillCaretDown className="downArrow" />
+						</div>
+						{isOpen && (
+							<ul className="catDrop">
+								<li>
+									<Link
+										to="/category/kitchen"
+										className="navLink"
+										onClick={() =>
+											isOpen ? setIsOpen(false) : setIsOpen(true)
+										}
+									>
+										מטבחים
+									</Link>
+								</li>
+								<li>
+									<Link
+										to="/category/bathroom"
+										className="navLink"
+										onClick={() =>
+											isOpen ? setIsOpen(false) : setIsOpen(true)
+										}
+									>
+										ארונות אמבטיה
+									</Link>
+								</li>
+								<li>
+									<Link
+										to="/category/library"
+										className="navLink"
+										onClick={() =>
+											isOpen ? setIsOpen(false) : setIsOpen(true)
+										}
+									>
+										ארונות וספריות
+									</Link>
+								</li>
+							</ul>
+						)}
+					</div>
+				</li>
+				<li>
+					<Link to="/about" className="navLink">
+						אודות
 					</Link>
 				</li>
 				<li>
