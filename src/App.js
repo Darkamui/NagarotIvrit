@@ -10,7 +10,6 @@ import PrivateRoute from "./components/PrivateRoute";
 import Navbar from "./components/Navbar";
 import Category from "./pages/Category";
 import CreateProject from "./pages/CreateProject";
-import Listing from "./pages/Listing";
 import Home from "./pages/Home";
 import EditProject from "./pages/EditProject";
 import Footer from "./components/Footer";
@@ -41,10 +40,7 @@ function App() {
 					{/* Load depending on category */}
 					<Route path="/category/:categoryName" element={<Category />} />
 					{/* Load depending on listing */}
-					<Route
-						path="/category/:categoryName/:listingId"
-						element={<Listing />}
-					/>
+
 					<Route path="/sign-in" element={<SignIn />} />
 				</Routes>
 				<Footer />

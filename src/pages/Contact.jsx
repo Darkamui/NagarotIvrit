@@ -13,6 +13,7 @@ const Contact = () => {
 			center: [34.749469152928945, 31.886363472344783],
 			zoom: 15,
 		});
+		/* eslint-disable */
 		let marker1 = new mapboxgl.Marker()
 			.setLngLat([34.749469152928945, 31.886363472344783])
 			.addTo(map.current);

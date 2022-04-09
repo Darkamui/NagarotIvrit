@@ -1,6 +1,5 @@
 import React from "react";
 import vid from "../img/carpenter1.mp4";
-import img from "../img/carpenter.png";
 import wood from "../img/wood.png";
 const About = () => {
 	return (

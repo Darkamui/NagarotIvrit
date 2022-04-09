@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Spinner from "./Spinner";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 const ProjectCard = ({ project, images, categoryName }) => {
@@ -10,6 +9,7 @@ const ProjectCard = ({ project, images, categoryName }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [photoIndex, setPhotoIndex] = useState(0);
+	/* eslint-disable */
 	useEffect(() => {
 		let tempoImages = [];
 		if (categoryName !== "projects") {
