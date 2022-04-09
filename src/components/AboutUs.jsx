@@ -5,8 +5,8 @@ const AboutUs = () => {
 	return (
 		<section
 			className="about__section"
-			data-aos="zoom-in"
-			data-aos-duration="1500"
+			// data-aos="zoom-in"
+			// data-aos-duration="1500"
 		>
 			<div className="about__section-image_container">
 				<img src={aboutImg} alt="" className="about__section-image" />
