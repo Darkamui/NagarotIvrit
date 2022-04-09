@@ -12,10 +12,7 @@ const OurServices = () => {
 			<h2>כותרת כלשהי משהו משהו</h2>
 			<div className="services__container">
 				<Link to="/category/bathroom" className="services__content-link">
-					<div
-						className="card"
-						// data-aos="fade-left" data-aos-duration="1500"
-					>
+					<div className="card" data-aos="fade-left" data-aos-duration="1500">
 						<div className="services__image-container">
 							<img src={bathroomsImg} alt="" />
 						</div>
@@ -37,9 +34,9 @@ const OurServices = () => {
 				<Link to="/category/kitchen" className="services__content-link">
 					<div
 						className="card"
-						// data-aos="fade-up"
-						// data-aos-duration="1500"
-						// data-aos-delay="150"
+						data-aos="fade-up"
+						data-aos-duration="1500"
+						data-aos-delay="150"
 					>
 						<div className="services__content-container">
 							<h3>מטבחים</h3>
@@ -62,9 +59,9 @@ const OurServices = () => {
 				<Link to="/category/library" className="services__content-link">
 					<div
 						className="card"
-						// data-aos="fade-right"
-						// data-aos-duration="1500"
-						// data-aos-delay="300"
+						data-aos="fade-right"
+						data-aos-duration="1500"
+						data-aos-delay="300"
 					>
 						<div className="services__image-container">
 							<img src={libraryImg} alt="" />

@@ -57,8 +57,8 @@ const OurWorks = () => {
 	return (
 		<section
 			className="works__section"
-			// data-aos="fade-in"
-			// data-aos-duration="1000"
+			data-aos="fade-in"
+			data-aos-duration="2000"
 		>
 			<div className="works__section-container">
 				<h3>OUR WORKS</h3>

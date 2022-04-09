@@ -4,10 +4,7 @@ import client2 from "../img/client2.jpg";
 const Clients = () => {
 	return (
 		<section className="clients__section">
-			<div
-				className="box"
-				// data-aos="flip-left" data-aos-duration="1500"
-			>
+			<div className="box" data-aos="flip-left" data-aos-duration="1500">
 				<div className="item">
 					<div className="img-box">
 						<img src={client1} alt="" className="box-img" />
