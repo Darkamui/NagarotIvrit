@@ -35,7 +35,8 @@
 	}
 }
 .ourWorksItem {
-	background-color: rgb(114, 80, 41);
+	background-color: $color-background;
+	color: black;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

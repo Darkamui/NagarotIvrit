@@ -48,7 +48,7 @@ function EditProject() {
 				}
 			});
 		});
-		toast.success("Listing edited successfully");
+		toast.success("Project edited successfully!");
 		navigate(`/admin`);
 	};
 	const onMutate = (e) => {

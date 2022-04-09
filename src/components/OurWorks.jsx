@@ -38,9 +38,11 @@ const OurWorks = () => {
 
 				projects.forEach((project) => {
 					project.images = [];
+					let index = 0;
 					imgContain.forEach((img) => {
-						if (project.data.name === img.data.projectRef) {
+						if (project.data.name === img.data.projectRef && index < 5) {
 							project.images.push(img);
+							index++;
 						}
 					});
 				});

@@ -17,7 +17,7 @@ function Navbar() {
 						<HiX onClick={() => setToggle(false)} />
 						<ul>
 							<li>
-								<Link to="/home" onClick={() => setToggle(false)}>
+								<Link to="/" onClick={() => setToggle(false)}>
 									בית
 								</Link>
 							</li>

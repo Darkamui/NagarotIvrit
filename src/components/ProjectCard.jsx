@@ -45,7 +45,8 @@ const ProjectCard = ({ project, images, categoryName }) => {
 						dynamicHeight={false}
 						autoPlay={true}
 						showThumbs={false}
-						showStatus={false}
+						showStatus={true}
+						showIndicators={false}
 						infiniteLoop={true}
 						onClickItem={() => setIsOpen(true)}
 					>

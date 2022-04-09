@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 
 import Spinner from "../components/Spinner";
 import { ReactComponent as DeleteIcon } from "../assets/svg/deleteIcon.svg";
+import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
 function Profile() {
 	const auth = getAuth();
 
@@ -33,7 +34,25 @@ function Profile() {
 					data: doc.data(),
 				});
 			});
+
 			setListings(listings);
+			const imagesRef = collection(db, "images");
+			const imageSnap = await getDocs(imagesRef);
+			let images = [];
+			imageSnap.forEach((doc) => {
+				return images.push({
+					id: doc.id,
+					data: doc.data(),
+				});
+			});
+			listings.forEach((listing) => {
+				listing.data.images = [];
+				images.forEach((image) => {
+					if (image.data.projectRef === listing.data.name) {
+						listing.data.images.push(image);
+					}
+				});
+			});
 			setLoading(false);
 			console.log(listings);
 		};
@@ -50,7 +69,7 @@ function Profile() {
 				(listing) => listing.id !== listingId
 			);
 			setListings(updatedListing);
-			toast.success("Successfully deleted listing");
+			toast.success("Successfully deleted project!");
 		}
 	};
 	return (
@@ -87,17 +106,28 @@ function Profile() {
 							) : (
 								listings.map((listing, index) => (
 									<>
-										<div className="projectListContainer" key={index}>
-											<div className="projectList">
-												<div className="leftList">
-													<p>{listing.data.name}</p>
-													<img src={listing.data.coverImg} alt="" />
-												</div>
-
+										<div className="projectList" key={index}>
+											<div className="leftList">
+												<p>{listing.data.name}</p>
+												<img src={listing.data.coverImg} alt="" />
+											</div>
+											<div className="adminActions">
 												<DeleteIcon
 													className="removeIcon"
 													fill="rgb(231, 76,60)"
 													onClick={() => onDelete(listing.id)}
+												/>
+												<EditIcon
+													className="removeIcon"
+													fill="#a6e434"
+													onClick={() =>
+														navigate(`/edit-project/${listing.data.name}`, {
+															state: {
+																images: listing.data.images,
+																name: listing.data.name,
+															},
+														})
+													}
 												/>
 											</div>
 										</div>

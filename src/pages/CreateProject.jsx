@@ -24,13 +24,13 @@ import { toast } from "react-toastify";
 function CreateListing() {
 	const [loading, setLoading] = useState(false);
 	const [formData, setFormData] = useState({
-		city: "",
+		date: "",
 		name: "",
 		address: "",
 		description: "",
 		imgUrls: {},
 	});
-	const { name, address, imgUrls } = formData;
+	const { name, address, imgUrls, date, description } = formData;
 
 	// To link project to a user
 	const auth = getAuth();
@@ -128,7 +128,7 @@ function CreateListing() {
 		const docRef = await addDoc(collection(db, "Projects"), formDataCopy);
 		setLoading(false);
 
-		toast.success("Listing added successfully");
+		toast.success("Project added successfully!");
 		// Redirect to listing created with type and new doc id
 		navigate(`/edit-project/${name}`, {
 			state: {
@@ -190,19 +190,40 @@ function CreateListing() {
 							required
 						/>
 
-						<label className="formLabel">Address</label>
-						<textarea
-							className="formInputAddress"
+						<label className="formLabel">Date (optional)</label>
+						<input
+							className="formInputName"
+							type="text"
+							id="date"
+							value={date}
+							onChange={onMutate}
+							maxLength="60"
+							minLength="5"
+						/>
+
+						<label className="formLabel">Address (optional)</label>
+						<input
+							className="formInputName"
 							type="text"
 							id="address"
 							value={address}
 							onChange={onMutate}
-							required
+							maxLength="100"
+							minLength="5"
+						/>
+
+						<label className="formLabel">Description (optional)</label>
+						<textarea
+							className="formInputAddress"
+							type="text"
+							id="description"
+							value={description}
+							onChange={onMutate}
 						/>
 
 						<label className="formLabel">Images</label>
 						<label className="imagesInfo">
-							The first image will be the cover (keep size in mind).
+							The first image will be the cover (2MB Max.)
 						</label>
 						<input
 							className="formInputFile"

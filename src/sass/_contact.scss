@@ -3,6 +3,10 @@
 	direction: rtl;
 	position: relative;
 	padding-top: 10rem;
+	label {
+		display: none;
+	}
+
 	h1 {
 		text-align: center;
 		font-size: 4.5rem;
@@ -48,9 +52,6 @@
 	top: 0;
 	bottom: 0;
 	z-index: -1;
-}
-label {
-	display: none;
 }
 
 .contact_form {
