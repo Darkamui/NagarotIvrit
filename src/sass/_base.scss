@@ -50,6 +50,9 @@ a {
 		background-color: transparent;
 		color: $color-primary;
 	}
+	@media (max-width: 768px) {
+		padding: 1rem 2rem;
+	}
 }
 
 .secondary-button {
@@ -62,6 +65,9 @@ a {
 	&:hover {
 		background-color: transparent;
 		color: #fff;
+	}
+	@media (max-width: 768px) {
+		padding: 1rem 2rem;
 	}
 }
 .carousel .control-prev.control-arrow:before {

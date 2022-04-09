@@ -63,10 +63,8 @@ const OurWorks = () => {
 			<div className="works__section-container">
 				<h3>OUR WORKS</h3>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi modi
-					aliquid maiores incidunt similique. Quidem aliquid ducimus illum
-					architecto amet assumenda exercitationem! Esse rerum asperiores natus
-					vitae illum ullam dolores?
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+					aliquid ducimus illum architecto amet assumenda exercitationem!
 				</p>
 				<div className="ourWorksContainer">
 					{loading ? (
@@ -83,6 +81,7 @@ const OurWorks = () => {
 									showStatus={false}
 									showIndicators={false}
 									infiniteLoop={true}
+									swipeable={true}
 								>
 									{project.images.map((image, index) => (
 										<div className="projectCardImgContainer" key={index}>
