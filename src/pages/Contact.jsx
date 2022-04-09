@@ -34,7 +34,7 @@ const Contact = () => {
 					<source src={vid} type="video/mp4" />
 				</video>
 
-				<div className="contact__container slit-in-vertical">
+				<div className="contact__container ">
 					<h1>צרו איתנו קשר!</h1>
 					<div className="flex">
 						<div className="contact_form">

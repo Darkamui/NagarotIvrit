@@ -17,7 +17,7 @@ const About = () => {
 					<source src={vid} type="video/mp4" />
 				</video>
 
-				<div className="about__toprow slit-in-vertical">
+				<div className="about__toprow ">
 					<div className="about__content-container">
 						<h1>ברוכים הבאים לנגרות עברית</h1>
 						<p>

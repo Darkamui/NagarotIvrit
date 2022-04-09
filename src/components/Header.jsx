@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
 	return (
-		<header class="header__container">
-			<div class="header__box-container">
+		<header class="header__container fade-in">
+			<div class="header__box-container ">
 				<h1 class="fade-in-bottom">אנחנו מספקים</h1>
 				<h1 class="fade-in-bottomDelay">נגרות בהתאמה אישית</h1>
 				<div class="slide-in-elliptic-top-fwd">

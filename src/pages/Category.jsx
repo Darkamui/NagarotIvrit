@@ -84,7 +84,7 @@ function Category() {
 				<Spinner />
 			) : projects ? (
 				<>
-					<main className="catHeight">
+					<main className="catHeight fade-in">
 						<p className="catTitle">{params.categoryName}</p>
 						<div className="categoryContainer">
 							{
