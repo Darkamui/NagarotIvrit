@@ -101,7 +101,7 @@ nav {
 
 		display: flex;
 		justify-content: flex-end;
-		align-items: flex-end;
+		align-items: center;
 		flex-direction: column;
 
 		background-color: #fff;
@@ -110,7 +110,10 @@ nav {
 
 		/* top box shadow */
 		box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
-
+		img {
+			max-width: 15rem;
+			width: 100%;
+		}
 		svg {
 			width: 35px;
 			height: 35px;
@@ -127,18 +130,18 @@ nav {
 
 			display: flex;
 			justify-content: flex-start;
-			align-items: flex-start;
+			align-items: center;
 			flex-direction: column;
 
 			li {
 				margin: 1rem;
-
+				text-align: center;
 				a {
 					color: $color-grey-dark-1;
 					text-decoration: none;
-					font-size: 1rem;
+					font-size: 1.5rem;
 					text-transform: uppercase;
-					font-weight: 500;
+					font-weight: 600;
 
 					transition: all 0.3s ease-in-out;
 

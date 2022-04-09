@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-
+import mini from "../img/mini-carp.jpg";
 import logo from "../img/logo.png";
 function Navbar() {
 	const [toggle, setToggle] = useState(false);
@@ -16,7 +16,7 @@ function Navbar() {
 					<div>
 						<HiX onClick={() => setToggle(false)} />
 						<ul>
-							{["home", "about", "work", "skills", "contact"].map((item) => (
+							{["בית", "פרוייקטים", "אודות", "צור קשר"].map((item) => (
 								<li key={item}>
 									<a href={`#${item}`} onClick={() => setToggle(false)}>
 										{item}
@@ -24,6 +24,7 @@ function Navbar() {
 								</li>
 							))}
 						</ul>
+						<img src={mini} alt="" />
 					</div>
 				)}
 			</div>
