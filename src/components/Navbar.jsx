@@ -16,13 +16,26 @@ function Navbar() {
 					<div>
 						<HiX onClick={() => setToggle(false)} />
 						<ul>
-							{["בית", "פרוייקטים", "אודות", "צור קשר"].map((item) => (
-								<li key={item}>
-									<a href={`#${item}`} onClick={() => setToggle(false)}>
-										{item}
-									</a>
-								</li>
-							))}
+							<li>
+								<Link to="/home" onClick={() => setToggle(false)}>
+									בית
+								</Link>
+							</li>
+							<li>
+								<Link to="/projects" onClick={() => setToggle(false)}>
+									פרוייקטים
+								</Link>
+							</li>
+							<li>
+								<Link to="/about" onClick={() => setToggle(false)}>
+									אודות
+								</Link>
+							</li>
+							<li>
+								<Link to="/contact" onClick={() => setToggle(false)}>
+									צור קשר
+								</Link>
+							</li>
 						</ul>
 						<img src={mini} alt="" />
 					</div>
