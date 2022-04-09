@@ -12,6 +12,9 @@
 		padding-bottom: 2rem;
 		width: 50%;
 		margin: auto;
+		@media (max-width: 768px) {
+			width: 75%;
+		}
 	}
 	.works__section-container {
 		display: flex;

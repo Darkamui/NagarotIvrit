@@ -5,6 +5,11 @@
 	margin: auto;
 	display: flex;
 	gap: 3rem;
+	@media only screen and (max-width: 768) {
+		img {
+			padding: 0;
+		}
+	}
 }
 .about__section-image {
 	max-width: 65rem;
