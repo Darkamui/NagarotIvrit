@@ -9,7 +9,6 @@ const ProjectCard = ({ project, images, categoryName }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [photoIndex, setPhotoIndex] = useState(0);
-	/* eslint-disable */
 	useEffect(() => {
 		let tempoImages = [];
 		if (categoryName !== "projects") {
@@ -32,7 +31,7 @@ const ProjectCard = ({ project, images, categoryName }) => {
 		setTempImages(tempoImages);
 		console.log(tempImages);
 		setLoading(false);
-	}, []);
+	}, [tempImages, images, project.data.name, categoryName]);
 
 	return (
 		<>

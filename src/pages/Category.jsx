@@ -75,7 +75,7 @@ function Category() {
 		};
 		// Call of the main async function
 		fetchListings();
-	}, [params.categoryName]);
+	}, [params.categoryName, images]);
 
 	return (
 		<div>

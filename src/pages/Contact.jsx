@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import vid from "../img/carpenter-about.mp4";
+import contact from "../img/contact.png";
+
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 const Contact = () => {
 	mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
@@ -21,7 +23,14 @@ const Contact = () => {
 	return (
 		<>
 			<section className="contact__page">
-				<video id="background-video" className="fade-in" autoPlay loop muted>
+				<video
+					id="background-video"
+					className="fade-in"
+					poster={contact}
+					autoPlay
+					loop
+					muted
+				>
 					<source src={vid} type="video/mp4" />
 				</video>
 

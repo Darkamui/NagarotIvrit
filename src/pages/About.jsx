@@ -1,11 +1,19 @@
 import React from "react";
 import vid from "../img/carpenter1.mp4";
 import wood from "../img/wood.png";
+import about from "../img/about.png";
 const About = () => {
 	return (
 		<>
 			<section className="about__page">
-				<video id="background-video" className="fade-in" autoPlay loop muted>
+				<video
+					id="background-video"
+					className="fade-in"
+					poster={about}
+					autoPlay
+					loop
+					muted
+				>
 					<source src={vid} type="video/mp4" />
 				</video>
 
