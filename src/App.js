@@ -25,7 +25,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/projects" element={<Projects />} />
-					<Route path="/about" element={<About />} />
+					<Route path="/about" element={<About />} exact />
 					<Route path="/contact" element={<Contact />} />
 					{/* Nested protected route  */}
 					<Route path="/admin" element={<PrivateRoute />}>
