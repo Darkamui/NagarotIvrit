@@ -20,6 +20,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
+import Footer from "../components/Footer";
 
 function CreateListing() {
 	const [loading, setLoading] = useState(false);

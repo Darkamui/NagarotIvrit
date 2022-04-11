@@ -6,6 +6,7 @@ import { db } from "../firebase.config";
 import { useLocation, useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
+import Footer from "../components/Footer";
 
 function EditProject() {
 	const [loading, setLoading] = useState(false);
