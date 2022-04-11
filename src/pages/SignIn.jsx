@@ -36,7 +36,7 @@ const SignIn = () => {
 			);
 			// Redirect if user
 			if (userCredential.user) {
-				navigate("/admin");
+				navigate("/yogibear");
 			}
 		} catch (error) {
 			toast.error("Bad User credentials");

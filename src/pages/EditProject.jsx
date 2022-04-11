@@ -50,7 +50,7 @@ function EditProject() {
 			});
 		});
 		toast.success("Project edited successfully!");
-		navigate(`/admin`);
+		navigate(`/yogibear`);
 	};
 	const onMutate = (e) => {
 		// Add tag to array on change
@@ -88,11 +88,14 @@ function EditProject() {
 			<div className="createProjectContainer">
 				<div className="createProjectContentContainer">
 					<header>
-						<p className="pageHeader">Edit {state.name}</p>
+						<p className="pageHeader">
+							{state.name}
+							<br />
+							Reset project image tags
+						</p>
 					</header>
 					<main>
 						<form onSubmit={onSubmit}>
-							<label>Images</label>
 							<div className="editProjectForm">
 								{state.images.map((image, index) => (
 									<div className="editProjectItem">

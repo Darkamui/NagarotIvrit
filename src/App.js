@@ -15,6 +15,7 @@ import EditProject from "./pages/EditProject";
 import Projects from "./pages/Project";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Edit from "./pages/Edit";
 
 function App() {
 	return (
@@ -27,14 +28,17 @@ function App() {
 					<Route path="/about" element={<About />} exact />
 					<Route path="/contact" element={<Contact />} />
 					{/* Nested protected route  */}
-					<Route path="/admin" element={<PrivateRoute />}>
-						<Route path="/admin" element={<Admin />} />
+					<Route path="/yogibear" element={<PrivateRoute />}>
+						<Route path="/yogibear" element={<Admin />} />
 					</Route>
 					<Route path="/create-project" element={<PrivateRoute />}>
 						<Route path="/create-project" element={<CreateProject />} />
 					</Route>
 					<Route path="/edit-project/:projectId" element={<PrivateRoute />}>
 						<Route path="/edit-project/:projectId" element={<EditProject />} />
+					</Route>
+					<Route path="/edit/:projectId" element={<PrivateRoute />}>
+						<Route path="/edit/:projectId" element={<Edit />} />
 					</Route>
 					{/* Load depending on category */}
 					<Route path="/category/:categoryName" element={<Category />} />

@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 import { ReactComponent as DeleteIcon } from "../assets/svg/deleteIcon.svg";
 import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
+import { ReactComponent as VisibilityIcon } from "../assets/svg/visibilityIcon.svg";
 import Footer from "../components/Footer";
 function Profile() {
 	const auth = getAuth();
@@ -121,6 +122,19 @@ function Profile() {
 												<EditIcon
 													className="removeIcon"
 													fill="#a6e434"
+													onClick={() =>
+														navigate(`/edit/${listing.data.name}`, {
+															state: {
+																images: listing.data.images,
+																name: listing.data.name,
+																listing: listing,
+															},
+														})
+													}
+												/>
+												<VisibilityIcon
+													className="removeIcon"
+													fill="#a8cc64"
 													onClick={() =>
 														navigate(`/edit-project/${listing.data.name}`, {
 															state: {
