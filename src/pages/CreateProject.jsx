@@ -171,79 +171,82 @@ function CreateListing() {
 	}
 
 	return (
-		<div className="createProjectContainer">
-			<div className="createProjectContentContainer">
-				<header>
-					<p className="pageHeader">Create a project</p>
-				</header>
-				<main>
-					<form onSubmit={onSubmit}>
-						<label className="formLabel">Name</label>
-						<input
-							className="formInputName"
-							type="text"
-							id="name"
-							value={name}
-							onChange={onMutate}
-							maxLength="60"
-							minLength="5"
-							required
-						/>
+		<>
+			<div className="createProjectContainer">
+				<div className="createProjectContentContainer">
+					<header>
+						<p className="pageHeader">Create a project</p>
+					</header>
+					<main>
+						<form onSubmit={onSubmit}>
+							<label className="formLabel">Name</label>
+							<input
+								className="formInputName"
+								type="text"
+								id="name"
+								value={name}
+								onChange={onMutate}
+								maxLength="60"
+								minLength="5"
+								required
+							/>
 
-						<label className="formLabel">Date (optional)</label>
-						<input
-							className="formInputName"
-							type="text"
-							id="date"
-							value={date}
-							onChange={onMutate}
-							maxLength="60"
-							minLength="5"
-						/>
+							<label className="formLabel">Date (optional)</label>
+							<input
+								className="formInputName"
+								type="text"
+								id="date"
+								value={date}
+								onChange={onMutate}
+								maxLength="60"
+								minLength="5"
+							/>
 
-						<label className="formLabel">Address (optional)</label>
-						<input
-							className="formInputName"
-							type="text"
-							id="address"
-							value={address}
-							onChange={onMutate}
-							maxLength="100"
-							minLength="5"
-						/>
+							<label className="formLabel">Address (optional)</label>
+							<input
+								className="formInputName"
+								type="text"
+								id="address"
+								value={address}
+								onChange={onMutate}
+								maxLength="100"
+								minLength="5"
+							/>
 
-						<label className="formLabel">Description (optional)</label>
-						<textarea
-							className="formInputAddress"
-							type="text"
-							id="description"
-							value={description}
-							onChange={onMutate}
-						/>
+							<label className="formLabel">Description (optional)</label>
+							<textarea
+								className="formInputAddress"
+								type="text"
+								id="description"
+								value={description}
+								onChange={onMutate}
+							/>
 
-						<label className="formLabel">Images</label>
-						<label className="imagesInfo">
-							The first image will be the cover (2MB Max.)
-						</label>
-						<input
-							className="formInputFile"
-							type="file"
-							id="imgUrls"
-							onChange={onMutate}
-							accept=".jpg,.png,.jpeg,.webp"
-							multiple
-							required
-						/>
-						<button
-							type="submit"
-							className="primary-button createListingButton"
-						>
-							Create Project
-						</button>
-					</form>
-				</main>
+							<label className="formLabel">Images</label>
+							<label className="imagesInfo">
+								The first image will be the cover (2MB Max.)
+							</label>
+							<input
+								className="formInputFile"
+								type="file"
+								id="imgUrls"
+								onChange={onMutate}
+								accept=".jpg,.png,.jpeg,.webp"
+								multiple
+								required
+							/>
+							<button
+								type="submit"
+								className="primary-button createListingButton"
+							>
+								Create Project
+							</button>
+						</form>
+					</main>
+				</div>
 			</div>
-		</div>
+			<Footer />
+		</>
 	);
 }
 

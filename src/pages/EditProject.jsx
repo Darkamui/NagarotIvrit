@@ -83,50 +83,57 @@ function EditProject() {
 	}
 
 	return (
-		<div className="createProjectContainer">
-			<div className="createProjectContentContainer">
-				<header>
-					<p className="pageHeader">Edit {state.name}</p>
-				</header>
-				<main>
-					<form onSubmit={onSubmit}>
-						<label>Images</label>
-						<div className="editProjectForm">
-							{state.images.map((image, index) => (
-								<div className="editProjectItem">
-									<img src={image.data.url} alt="" />
+		<>
+			<div className="createProjectContainer">
+				<div className="createProjectContentContainer">
+					<header>
+						<p className="pageHeader">Edit {state.name}</p>
+					</header>
+					<main>
+						<form onSubmit={onSubmit}>
+							<label>Images</label>
+							<div className="editProjectForm">
+								{state.images.map((image, index) => (
+									<div className="editProjectItem">
+										<img src={image.data.url} alt="" />
 
-									<select id={`${image.data.url}`} onChange={onMutate} required>
-										<option selected disabled value="">
-											Choose tag..
-										</option>
-										<option value="bathroom">Bathroom</option>
-										<option value="kitchen">Kitchen</option>
-										<option value="library">Library</option>
-										<option value="other">Other</option>
-									</select>
-									<select id={`${image.data.url}`} onChange={onMutate}>
-										<option selected disabled value="">
-											Choose tag..
-										</option>
-										<option value="bathroom">Bathroom</option>
-										<option value="kitchen">Kitchen</option>
-										<option value="library">Library</option>
-										<option value="other">Other</option>
-									</select>
-								</div>
-							))}
-						</div>
-						<button
-							type="submit"
-							className="primary-button createListingButton"
-						>
-							Submit Project
-						</button>
-					</form>
-				</main>
+										<select
+											id={`${image.data.url}`}
+											onChange={onMutate}
+											required
+										>
+											<option selected disabled value="">
+												Choose tag..
+											</option>
+											<option value="bathroom">Bathroom</option>
+											<option value="kitchen">Kitchen</option>
+											<option value="library">Library</option>
+											<option value="other">Other</option>
+										</select>
+										<select id={`${image.data.url}`} onChange={onMutate}>
+											<option selected disabled value="">
+												Choose tag..
+											</option>
+											<option value="bathroom">Bathroom</option>
+											<option value="kitchen">Kitchen</option>
+											<option value="library">Library</option>
+											<option value="other">Other</option>
+										</select>
+									</div>
+								))}
+							</div>
+							<button
+								type="submit"
+								className="primary-button createListingButton"
+							>
+								Submit Project
+							</button>
+						</form>
+					</main>
+				</div>
 			</div>
-		</div>
+			<Footer />
+		</>
 	);
 }
 

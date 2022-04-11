@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
+import Footer from "../components/Footer";
 
 const SignIn = () => {
 	const [formData, setFormData] = useState({
@@ -75,6 +76,7 @@ const SignIn = () => {
 					</div>
 				</form>
 			</div>
+			<Footer />
 		</>
 	);
 };

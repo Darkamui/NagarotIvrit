@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 import { ReactComponent as DeleteIcon } from "../assets/svg/deleteIcon.svg";
 import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
+import Footer from "../components/Footer";
 function Profile() {
 	const auth = getAuth();
 
@@ -153,6 +154,7 @@ function Profile() {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }

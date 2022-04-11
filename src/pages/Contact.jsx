@@ -3,6 +3,7 @@ import vid from "../img/carpenter-about.mp4";
 import contact from "../img/contact.png";
 
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import Footer from "../components/Footer";
 const Contact = () => {
 	mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
 	const mapContainer = useRef(null);
@@ -74,6 +75,7 @@ const Contact = () => {
 					</div>
 				</div>
 			</section>
+			<Footer />
 		</>
 	);
 };

@@ -2,6 +2,7 @@ import React from "react";
 import vid from "../img/carpenter1.mp4";
 import wood from "../img/wood.png";
 import about from "../img/about.png";
+import Footer from "../components/Footer";
 const About = () => {
 	return (
 		<>
@@ -45,6 +46,7 @@ const About = () => {
 					</div>
 				</div>
 			</section>
+			<Footer />
 		</>
 	);
 };

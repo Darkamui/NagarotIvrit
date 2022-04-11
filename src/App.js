@@ -12,7 +12,6 @@ import Category from "./pages/Category";
 import CreateProject from "./pages/CreateProject";
 import Home from "./pages/Home";
 import EditProject from "./pages/EditProject";
-import Footer from "./components/Footer";
 import Projects from "./pages/Project";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -43,7 +42,6 @@ function App() {
 
 					<Route path="/sign-in" element={<SignIn />} />
 				</Routes>
-				<Footer />
 			</Router>
 			<ToastContainer />
 		</>

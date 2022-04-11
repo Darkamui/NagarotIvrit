@@ -6,6 +6,7 @@ import { db } from "../firebase.config";
 import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 import ProjectCard from "../components/ProjectCard";
+import Footer from "../components/Footer";
 function Projects() {
 	// State for data
 	const [images, setImages] = useState(null);
@@ -87,6 +88,7 @@ function Projects() {
 							}
 						</div>
 					</main>
+					<Footer />
 				</>
 			) : (
 				<p>No listings for {params.categoryName}</p>
