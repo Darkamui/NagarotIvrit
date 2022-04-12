@@ -45,10 +45,10 @@ function Edit() {
 					data: doc.data(),
 				});
 			});
-			let filteredImages = [];
 			images.forEach(async (image) => {
 				if (image.data.projectRef === state.listing.data.name) {
 					const iRef = doc(db, "images", image.id);
+					// eslint-disable-next-line
 					const attempt = await updateDoc(iRef, {
 						projectRef: formData.name,
 					});
@@ -57,6 +57,7 @@ function Edit() {
 		}
 		// Get all images from firestore
 		const tempRef = doc(db, "Projects", state.listing.id);
+		// eslint-disable-next-line
 		const attempt = await updateDoc(tempRef, {
 			name: formData.name,
 			date: formData.date,

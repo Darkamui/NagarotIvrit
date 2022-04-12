@@ -44,18 +44,33 @@ function Navbar() {
 				)}
 			</div>
 			<div className="navSocialContainer">
-				<Link to="/admin" className="navLink">
+				<a
+					href="https://www.facebook.com/nagarotevrit"
+					target="_blank"
+					rel="noreferrer"
+					className="navLink"
+				>
 					<i className="fab fa-facebook"></i>
-				</Link>
-				<Link to="/" className="navLink">
+				</a>
+				<a
+					href="https://www.twitter.com/nagarotevrit/"
+					target="_blank"
+					rel="noreferrer"
+					className="navLink"
+				>
 					<i className="fab fa-twitter"></i>
-				</Link>
-				<Link to="/" className="navLink">
+				</a>
+				<Link to="/yogibear" className="navLink">
 					<i className="fab fa-youtube"></i>
 				</Link>
-				<Link to="/" className="navLink">
+				<a
+					href="https://www.instagram.com/nagarotevrit/"
+					target="_blank"
+					rel="noreferrer"
+					className="navLink"
+				>
 					<i className="fab fa-instagram"></i>
-				</Link>
+				</a>
 			</div>
 			<div className="navLinksContainer">
 				<li>
