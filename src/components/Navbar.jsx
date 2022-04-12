@@ -128,6 +128,17 @@ function Navbar() {
 										ארונות וספריות
 									</Link>
 								</li>
+								<li>
+									<Link
+										to="/category/bible"
+										className="navLink"
+										onClick={() =>
+											isOpen ? setIsOpen(false) : setIsOpen(true)
+										}
+									>
+										ספריות קודש
+									</Link>
+								</li>
 							</ul>
 						)}
 					</div>

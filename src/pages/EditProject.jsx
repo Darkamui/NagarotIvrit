@@ -112,6 +112,7 @@ function EditProject() {
 											<option value="bathroom">Bathroom</option>
 											<option value="kitchen">Kitchen</option>
 											<option value="library">Library</option>
+											<option value="bible">Bible</option>
 											<option value="other">Other</option>
 										</select>
 										<select id={`${image.data.url}`} onChange={onMutate}>
@@ -121,6 +122,7 @@ function EditProject() {
 											<option value="bathroom">Bathroom</option>
 											<option value="kitchen">Kitchen</option>
 											<option value="library">Library</option>
+											<option value="bible">Bible</option>
 											<option value="other">Other</option>
 										</select>
 									</div>

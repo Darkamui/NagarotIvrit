@@ -63,7 +63,7 @@ function Projects() {
 		};
 		// Call of the main async function
 		fetchListings();
-	}, [params.categoryName]);
+	}, []);
 
 	return (
 		<div>

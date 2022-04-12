@@ -31,7 +31,7 @@ const ProjectCard = ({ project, images, categoryName }) => {
 		setTempImages(tempoImages);
 		console.log(tempImages);
 		setLoading(false);
-	}, [tempImages, images, project.data.name, categoryName]);
+	}, [categoryName, images]);
 
 	return (
 		<>
