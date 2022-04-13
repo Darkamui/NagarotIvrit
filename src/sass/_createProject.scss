@@ -19,11 +19,12 @@
 			flex-direction: column;
 			font-size: 1.5rem;
 			input,
-			textarea {
+			textarea,
+			select {
 				padding: 1rem 2rem;
 				margin: 1rem 0;
 				border: none;
-				background-color: bisque;
+				background-color: rgb(255, 237, 214);
 				border-radius: 10px;
 			}
 		}

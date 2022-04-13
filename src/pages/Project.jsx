@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // Used to get value from url
 import { useParams } from "react-router-dom";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
@@ -24,7 +24,8 @@ function Projects() {
 				// Get all projects then filter with Id
 				let projects = [];
 				const projectsRef = collection(db, "Projects");
-				const docSnap = await getDocs(projectsRef);
+				const q = query(projectsRef, where("isfeatured", "==", "yes"));
+				const docSnap = await getDocs(q);
 				docSnap.forEach((doc) => {
 					return projects.push({
 						id: doc.id,

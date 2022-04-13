@@ -22,6 +22,9 @@ function Edit() {
 		description: state.listing.data.description
 			? state.listing.data.description
 			: "",
+		isfeatured: state.listing.data.isfeatured
+			? state.listing.data.isfeatured
+			: "false",
 	});
 	const onChange = (e) => {
 		setFormData((prevState) => ({
@@ -63,6 +66,7 @@ function Edit() {
 			date: formData.date,
 			address: formData.address,
 			description: formData.description,
+			isfeatured: formData.isfeatured,
 		});
 
 		toast.success("Project edited successfully!");
@@ -112,7 +116,18 @@ function Edit() {
 								onChange={(e) => onChange(e)}
 								required
 							/>
-
+							<select
+								id="isfeatured"
+								onChange={(e) => onChange(e)}
+								required
+								className="formInputName"
+							>
+								<option selected disabled value="" className="formInputName">
+									Is featured ?
+								</option>
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
 							<label className="formLabel">Date (optional)</label>
 							<input
 								className="formInputName"
