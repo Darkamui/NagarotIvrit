@@ -71,6 +71,7 @@ nav {
 		font-size: 2rem;
 		padding: 1rem;
 		font-weight: 600;
+		display: flex;
 		&:hover {
 			color: $color-primary;
 		}
@@ -79,13 +80,20 @@ nav {
 		display: none;
 	}
 }
-
+.enMobile {
+	display: flex;
+}
+@media (min-width: 1024px) {
+	.enMobile {
+		display: none;
+	}
+}
 .navSocialContainer {
 	flex: 1;
 	display: flex;
 	gap: 2rem;
 	align-items: center;
-	@media (max-width: 1024px) {
+	@media (max-width: 1300px) {
 		display: none;
 	}
 }

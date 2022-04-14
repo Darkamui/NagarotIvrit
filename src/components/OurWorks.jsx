@@ -78,7 +78,6 @@ const OurWorks = () => {
 								<h3>{project.data.name}</h3>
 								<Carousel
 									dynamicHeight={true}
-									autoPlay={true}
 									showThumbs={false}
 									showStatus={false}
 									showIndicators={false}

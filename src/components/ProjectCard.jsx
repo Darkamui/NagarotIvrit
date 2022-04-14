@@ -43,7 +43,6 @@ const ProjectCard = ({ project, images, categoryName }) => {
 					<h3>{project.data.name}</h3>
 					<Carousel
 						dynamicHeight={false}
-						autoPlay={true}
 						showThumbs={false}
 						showStatus={true}
 						showIndicators={false}

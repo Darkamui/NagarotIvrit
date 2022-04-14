@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { AiFillCaretDown } from "react-icons/ai";
+import { RiEnglishInput } from "react-icons/ri";
 import mini from "../img/mini-carp.jpg";
 import logo from "../img/logo.png";
 function Navbar() {
@@ -11,38 +12,51 @@ function Navbar() {
 
 	return (
 		<nav>
-			<div className="app__navbar-menu">
-				{!toggle && <HiMenuAlt4 onClick={() => setToggle(true)} />}
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					gap: "1rem",
+				}}
+			>
+				<div className="app__navbar-menu">
+					{!toggle && <HiMenuAlt4 onClick={() => setToggle(true)} />}
 
-				{toggle && (
-					<div>
-						<HiX onClick={() => setToggle(false)} />
-						<ul>
-							<li>
-								<Link to="/" onClick={() => setToggle(false)}>
-									בית
-								</Link>
-							</li>
-							<li>
-								<Link to="/projects" onClick={() => setToggle(false)}>
-									פרוייקטים
-								</Link>
-							</li>
-							<li>
-								<Link to="/about" onClick={() => setToggle(false)}>
-									אודות
-								</Link>
-							</li>
-							<li>
-								<Link to="/contact" onClick={() => setToggle(false)}>
-									צור קשר
-								</Link>
-							</li>
-						</ul>
-						<img src={mini} alt="" />
-					</div>
-				)}
+					{toggle && (
+						<div>
+							<HiX onClick={() => setToggle(false)} />
+							<ul>
+								<li>
+									<Link to="/" onClick={() => setToggle(false)}>
+										בית
+									</Link>
+								</li>
+								<li>
+									<Link to="/projects" onClick={() => setToggle(false)}>
+										פרוייקטים
+									</Link>
+								</li>
+								<li>
+									<Link to="/about" onClick={() => setToggle(false)}>
+										אודות
+									</Link>
+								</li>
+								<li>
+									<Link to="/contact" onClick={() => setToggle(false)}>
+										צור קשר
+									</Link>
+								</li>
+							</ul>
+							<img src={mini} alt="" />
+						</div>
+					)}
+				</div>
+				<a href="" className="enMobile">
+					<RiEnglishInput size={"2.5rem"} />
+				</a>
 			</div>
+
 			<div className="navSocialContainer">
 				<a
 					href="https://www.facebook.com/nagarotevrit"
@@ -151,6 +165,11 @@ function Navbar() {
 				<li>
 					<Link to="/contact" className="navLink">
 						צור קשר
+					</Link>
+				</li>
+				<li>
+					<Link to="/contact" className="navLink">
+						En
 					</Link>
 				</li>
 			</div>
