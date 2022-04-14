@@ -52,7 +52,7 @@ function Navbar() {
 						</div>
 					)}
 				</div>
-				<a href="" className="enMobile">
+				<a href="/" className="enMobile">
 					<RiEnglishInput size={"2.5rem"} />
 				</a>
 			</div>

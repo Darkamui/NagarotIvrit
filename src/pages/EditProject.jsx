@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+import {
+	collection,
+	doc,
+	getDocs,
+	updateDoc,
+	setDoc,
+} from "firebase/firestore";
 import { db } from "../firebase.config";
 import { useLocation, useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
@@ -46,6 +52,7 @@ function EditProject() {
 					const attempt = await updateDoc(tempRef, {
 						tags: image.data.tags,
 					});
+					console.log(image);
 				}
 			});
 		});
@@ -70,6 +77,11 @@ function EditProject() {
 			onAuthStateChanged(auth, (user) => {
 				setFormData({ ...formData, userRef: user.uid });
 			});
+			state.images.forEach((image) => {
+				image.data.tags = [];
+				image.data.tags[0] = "whatever";
+			});
+			console.log(state.images);
 		} else {
 			navigate("/sign-in");
 		}
