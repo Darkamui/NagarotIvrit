@@ -9,6 +9,8 @@ const ProjectCard = ({ project, images, categoryName }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [photoIndex, setPhotoIndex] = useState(0);
+	// Used as key to reset carousel index position on data change
+	let randomNumber = Math.floor(Math.random() * 99999 + 1);
 	useEffect(() => {
 		let tempoImages = [];
 		if (categoryName !== "projects") {
@@ -42,6 +44,7 @@ const ProjectCard = ({ project, images, categoryName }) => {
 				<div className="projectCardsContainer animate__animated animate__fadeIn">
 					<h3>{project.data.name}</h3>
 					<Carousel
+						key={randomNumber}
 						dynamicHeight={false}
 						showThumbs={false}
 						showStatus={true}
