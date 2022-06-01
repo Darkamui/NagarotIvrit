@@ -51,14 +51,11 @@ function Projects() {
 						}
 					});
 				});
-				console.log(images);
 
 				setProjects(projects);
-				console.log(projects);
 				setImages(images);
 				setLoading(false);
 			} catch (error) {
-				console.log(error);
 				toast.error("Could not fetch data");
 			}
 		};
