@@ -9,11 +9,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 10rem;
 }
 
 .loadingSpinner {
-	width: 64px;
-	height: 64px;
+	width: 150px;
+	height: 150px;
 	border: 8px solid;
 	border-color: #00cc66 transparent #00cc66 transparent;
 	border-radius: 50%;
