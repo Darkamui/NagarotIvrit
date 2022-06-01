@@ -22,7 +22,6 @@ const OurWorks = () => {
 					});
 				});
 				projects.images = [];
-				console.log(projects);
 
 				const imagesRef = collection(db, "images");
 				const imageQ = query(imagesRef, orderBy("timestamp", "desc"));
@@ -46,11 +45,11 @@ const OurWorks = () => {
 						}
 					});
 				});
-				console.log(projects);
 				setProjects(projects);
 				setLoading(false);
 			} catch (error) {
 				console.log(error);
+				("error");
 			}
 		};
 		fetchProjects();
