@@ -21,6 +21,8 @@ function Category() {
 		// Async cannot be used on useEffect so function is made
 		const fetchListings = async () => {
 			try {
+				setLoading(true);
+
 				// Get images with tag
 				const listingsRef = collection(db, "images");
 				const qImages = query(
