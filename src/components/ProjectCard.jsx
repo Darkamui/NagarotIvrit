@@ -12,6 +12,7 @@ const ProjectCard = ({ project, images, categoryName }) => {
 	// Used as key to reset carousel index position on data change
 	let randomNumber = Math.floor(Math.random() * 99999 + 1);
 	useEffect(() => {
+		setLoading(true);
 		let tempoImages = [];
 		if (categoryName !== "projects") {
 			images.forEach((image) => {
