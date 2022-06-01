@@ -22,7 +22,6 @@ function Category() {
 		const fetchListings = async () => {
 			try {
 				setLoading(true);
-
 				// Get images with tag
 				const listingsRef = collection(db, "images");
 				const qImages = query(
@@ -38,7 +37,6 @@ function Category() {
 						data: doc.data(),
 					});
 				});
-				console.log(images);
 				// Get project ids from images
 				let projectIds = [];
 				images.forEach((image) => {
@@ -69,10 +67,8 @@ function Category() {
 
 				setProjects(projectsA);
 				setImages(images);
-				console.log(projectsA);
 				setLoading(false);
 			} catch (error) {
-				console.log(error);
 				toast.error("Could not fetch data");
 			}
 		};

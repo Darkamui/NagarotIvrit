@@ -34,7 +34,6 @@ const ProjectCard = ({ project, images, categoryName }) => {
 		}
 
 		setTempImages(tempoImages);
-		console.log(tempImages);
 		setLoading(false);
 		// eslint-disable-next-line
 	}, [categoryName, images]);
