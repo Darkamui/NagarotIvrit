@@ -49,7 +49,6 @@ const OurWorks = () => {
 				setLoading(false);
 			} catch (error) {
 				console.log(error);
-				("error");
 			}
 		};
 		fetchProjects();
