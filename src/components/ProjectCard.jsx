@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+
 const ProjectCard = ({ project, images, categoryName }) => {
 	const [tempImages, setTempImages] = useState(null);
 	const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,7 @@ const ProjectCard = ({ project, images, categoryName }) => {
 	let randomNumber = Math.floor(Math.random() * 99999 + 1);
 	useEffect(() => {
 		setLoading(true);
+		setTempImages(null);
 		let tempoImages = [];
 		if (categoryName !== "projects") {
 			images.forEach((image) => {
@@ -42,7 +44,7 @@ const ProjectCard = ({ project, images, categoryName }) => {
 			{loading ? (
 				<Spinner />
 			) : tempImages ? (
-				<div className="projectCardsContainer animate__animated animate__fadeIn">
+				<div className="projectCardsContainer animate__animated  animate__flipInX">
 					<h3>{project.data.name}</h3>
 					<Carousel
 						key={randomNumber}

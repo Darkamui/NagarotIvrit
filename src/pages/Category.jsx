@@ -97,7 +97,6 @@ function Category() {
 										key={index}
 										project={project}
 										images={images}
-										className="fade-in-bottom"
 										categoryName={params.categoryName}
 									/>
 								))
